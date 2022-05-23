@@ -1,0 +1,42 @@
+@use '../../scss/' as*;
+
+
+.cards .card:nth-child(2),
+.cards .card:nth-child(2)::before,
+.cards .card:nth-child(2)::after {
+  animation-delay: 0.25s;
+}
+.cards .card:nth-child(3),
+.cards .card:nth-child(3)::before,
+.cards .card:nth-child(3)::after {
+  animation-delay: 0.5s;
+}
+.cards .card:nth-child(4),
+.cards .card:nth-child(4)::before,
+.cards .card:nth-child(4)::after {
+  animation-delay: 0.75s;
+}
+
+.card.charizard {
+    // $color1: $charizard1;
+    // $color2: $charizard2;
+    background-image: $charizardfront;
+  }
+  .card.pika {
+    // $color1: $pika1;
+    // $color2: $pika2;
+    background-image: $pikafront;
+  }
+  .card.mewtwo {
+    // $color1: $mewtwo1;
+    // $color2: $mewtwo2;
+    background-image: $mewtwofront;
+  }
+  .card.eevee {
+    // $color1: #ec9bb6;
+    // $color2: #ccac6f;
+    // $color3: #69e4a5;
+    // $color4: #8ec5d6;
+    // $color5: #b98cce;
+    background-image: $eeveefront;
+  }

@@ -1,0 +1,135 @@
+@use './scss/' as *;
+
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html{
+  font-size: 100%;
+}
+
+body{
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 1.5;
+
+  background-color: $body-bg;
+  color: $txt-color;
+}
+
+a{
+  text-decoration: none;
+  color: unset;
+}
+
+
+button, 
+input{
+  outline: 0;
+}
+
+ul{
+  list-style-type: none;
+}
+
+img{
+  max-width: 100%;
+}
+
+iframe{
+  border: 0;
+}
+
+.container{
+  max-width: 1660px;
+  margin: 2rem;
+}
+
+.mb-3{
+  margin-bottom: 3rem;
+}
+
+.mb-2{
+  margin-bottom: 2rem;
+}
+
+.section{
+  padding:0 2rem;
+}
+
+.section_header{
+  @include flex(center, space-between);
+}
+
+//-----------------------------------------------------------
+
+.cards, .demo{
+  @include flex(center, center);
+  text-align: center;
+}
+
+@include mobile{
+  .cards{
+    display: block;
+  }
+  .card{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+h1{
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.demo .card {
+  background-image: var(--back);
+  font-size: 2vh;
+}
+.demo .card > span {
+  position: relative;
+  top: 45%;
+}
+.demo .card:nth-of-type(1),
+.demo .card:nth-of-type(2),
+.demo .card:nth-of-type(3) {
+  width: 20vh;
+  height: 27.5vh;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4),
+    0 25px 15px -10px rgba(0, 0, 0, 0.5);
+  animation: none;
+}
+.demo .card:nth-of-type(1)::before,
+.demo .card:nth-of-type(2)::before,
+.demo .card:nth-of-type(3)::before,
+.demo .card:nth-of-type(1)::after,
+.demo .card:nth-of-type(2)::after,
+.demo .card:nth-of-type(3)::after {
+  animation: none;
+}
+.demo .card:nth-of-type(1)::before,
+.demo .card:nth-of-type(1)::after {
+  display: none;
+}
+.demo .card:nth-of-type(2) {
+  background: none;
+}
+.demo .card:nth-of-type(2)::before {
+  display: none;
+}
+.demo .card:nth-of-type(3) {
+  background: none;
+}
+.demo .card:nth-of-type(3)::after {
+  display: none;
+}
+.operator {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 6vh;
+}
